@@ -775,11 +775,11 @@ body {
 
 - **`color: #f32613;`**  
   - Sets the text color to a **bright red shade** (`#f32613`).  
-### **Detailed Explanation of the CSS Code**
+
 
 ---
 
-### **1. Middle Image Styling**
+### **12. Middle Image Styling**
 ```css
 .middle-image {
     position: absolute;
@@ -811,7 +811,7 @@ body {
 
 ---
 
-### **2. Section Styling**
+### **13: Section Styling**
 ```css
 section {
     padding: 60px 10%;
@@ -827,7 +827,7 @@ section {
 
 ---
 
-### **3. Dark Reality Section**
+### **14. Dark Reality Section**
 #### **Title Styling**
 ```css
 .dark-reality h2 {
@@ -892,7 +892,7 @@ section {
 
 ---
 
-### **4. Lost Knowledge Section**
+### **15. Lost Knowledge Section**
 #### **Title Styling**
 ```css
 .lost-knowledge h2 {
@@ -942,7 +942,7 @@ section {
 
 ---
 
-### **5. Revival Section**
+### **16. Revival Section**
 #### **Title Styling**
 ```css
 .revival h2 {
