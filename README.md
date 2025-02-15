@@ -27,7 +27,7 @@
 
 
 
-This is a detailed explanation of each line of your code:  
+This is a detailed explanation of each line of code
 
 ---
 
