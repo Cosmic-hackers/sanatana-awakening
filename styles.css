@@ -1,0 +1,389 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:rgb(0, 0, 0);
+    color: rgb(239, 235, 235);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(240, 209, 209, 0.1);
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(248, 239, 239);
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: rgb(230, 65, 6);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: rgb(243, 128, 28);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+/* Navbar Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Login Button */
+.btn.login {
+    background: transparent;
+    border: 2px solid rgb(245, 116, 51);
+    color: rgb(249, 187, 64);
+}
+
+.btn.login:hover {
+    background: rgb(241, 139, 37);
+    color: black;
+}
+
+/* Signup Button */
+.btn.signup {
+    background: rgb(249, 112, 33);
+    color: black;
+    border: 2px solid rgb(251, 187, 49);
+}
+
+.btn.signup:hover {
+    background: rgb(0, 0, 0);
+    color: black;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: black;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+
+@import url('https://fonts.cdnfonts.com/css/old-english-five');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+body {
+    background: linear-gradient(to bottom, #2c1d0f, #000000, #000000);
+    font-family: 'Poppins', sans-serif;
+    color: #faf7f7;
+    margin: 0;
+    overflow-x: hidden;
+}
+body {
+    background: black !important;
+}
+
+.banner {
+    background: black !important;
+}
+
+.slider {
+    background: transparent;
+}
+.slider img {
+    width: 100%;  /* Ensures full width */
+    height: 100%; /* Ensures it adapts to the container */
+    object-fit: contain; /* Prevents cropping */
+}
+
+.banner .slider .item {
+    box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.5);
+}
+
+/* 3D Slider */
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    top: 12%;
+    left: calc(50% - 110px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 18s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1200px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1200px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner {
+    margin-top: 100px; /* Adjust the value to move it down */
+}
+
+
+.slider {
+    top: 120px; /* Pushes the slider down */
+}
+
+.slider {
+    z-index: 1; /* Ensures it's behind the navbar */
+}
+.navbar {
+    z-index: 10; /* Ensures navbar is always visible */
+}
+
+
+/* 3D Book Covers */
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(600px);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(246, 103, 38, 0.4);
+    border-radius: 10px;
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(90%) contrast(110%);
+}
+
+/* Glowing Effect */
+.banner .slider .item:hover {
+    transform: scale(1.1) rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(620px);
+    box-shadow: 0px 0px 25px rgba(255, 204, 0, 0.8);
+}
+
+/* Title */
+.banner .content h1 {
+    font-family: 'Old English Five', serif;
+    font-size: 5em;
+    color: #f32613;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.middle-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.middle-image img {
+    width: 600px; /* Increase size */
+    height: auto;
+    border: 3px solid white; /* Optional border */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+    transform: scale(1.3); /* Slight zoom effect */
+}
+section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+.dark-reality h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #ff0000, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+.dark-reality .grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dark-reality .item {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-reality .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff7300;
+}
+
+.lost-knowledge h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff9f1c;
+    text-shadow: 2px 2px 10px rgba(255, 159, 28, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.lost-knowledge h2:hover {
+    color: #ff5400;
+    transform: scale(1.05);
+}
+
+.lost-knowledge .flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.lost-knowledge .card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lost-knowledge .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff7300;
+}
+.revival h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff7300, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 15px rgba(255, 204, 0, 0.5);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 3px 3px 15px rgba(255, 204, 0, 0.5); }
+    100% { text-shadow: 5px 5px 25px rgba(255, 204, 0, 0.9); }
+}
+
+.revival .carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.revival .course {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.revival .course:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff7300;
+}
+.dark-reality .item img,
+.lost-knowledge .card img,
+.revival .course img {
+    width: 100%; /* Make the image responsive */
+    max-width: 250px; /* Limit the maximum size */
+    height: 180px; /* Fix the height */
+    object-fit: cover; /* Crop and fit the image */
+    border-radius: 8px; /* Optional: Round corners */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 1023px) {
+    .banner .slider {
+        width: 180px;
+        height: 250px;
+        left: calc(50% - 90px);
+    }
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+    }
+    .banner .content h1 {
+        font-size: 3em;
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .history-card {
+        padding: 15px;
+    }
+}
